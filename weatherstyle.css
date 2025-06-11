@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.container {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.search-box {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+  width: 60%;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.autocomplete-items {
+  position: absolute;
+  background-color: #2c2c2c;
+  color: #fff;
+  border: 1px solid #444;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #444;
+  text-align: left;
+}
+
+.autocomplete-items div:hover {
+  background-color: #3d3d3d;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #357ab7;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.weather-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.temperature {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.unit-toggle {
+  font-size: 16px;
+  margin: 0 3px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.unit-toggle.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+.extra-info {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #aaa;
+}
+
+.right {
+  text-align: right;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.condition {
+  font-size: 16px;
+  color: #eee;
+  margin-top: 5px;
+}
