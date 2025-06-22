@@ -82,7 +82,10 @@ function fetchWeatherData(url) {
       const formattedDay = localTime.toLocaleDateString('en-US', { weekday: 'long' });
       const formattedTime = localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
 
+      const locationName = `${data.location.name}, ${data.location.country}`;
+
       const weatherHTML = `
+        <div class="location-name"><h2>${locationName}</h2></div>
         <div class="weather-container">
           <div class="left">
             <img src="${iconUrl}" class="weather-icon" alt="${condition}">
@@ -102,6 +105,7 @@ function fetchWeatherData(url) {
           </div>
         </div>
       `;
+
       showingCelsius = true;
       weatherDiv.innerHTML = weatherHTML;
     })
