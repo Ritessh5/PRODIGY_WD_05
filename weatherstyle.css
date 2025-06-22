@@ -1,8 +1,10 @@
+/* Modern Attractive Theme */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #121212;
-  height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,125 +12,149 @@ body {
 }
 
 .container {
-  background: #1e1e1e;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   text-align: center;
   max-width: 600px;
   width: 100%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 32px;
   color: #fff;
+  letter-spacing: 1px;
 }
 
 .search-box {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .autocomplete {
   position: relative;
-  display: inline-block;
-  width: 60%;
+  width: 80%;
 }
 
 input[type="text"] {
-  padding: 10px;
+  padding: 12px;
   width: 100%;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 16px;
+  outline: none;
 }
 
 .autocomplete-items {
   position: absolute;
-  background-color: #2c2c2c;
-  color: #fff;
-  border: 1px solid #444;
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ccc;
   z-index: 99;
   top: 100%;
   left: 0;
   right: 0;
   max-height: 200px;
   overflow-y: auto;
+  border-radius: 10px;
 }
 
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #ddd;
   text-align: left;
 }
 
 .autocomplete-items div:hover {
-  background-color: #3d3d3d;
+  background-color: #f0f0f0;
 }
 
 button {
-  padding: 10px 15px;
-  margin-left: 5px;
+  padding: 12px 18px;
   border: none;
-  background-color: #4a90e2;
+  background-color: #00b4db;
+  background-image: linear-gradient(to right, #0083b0, #00b4db);
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  transition: transform 0.2s;
 }
 
 button:hover {
-  background-color: #357ab7;
+  transform: scale(1.05);
 }
 
 .weather-container {
   display: flex;
   justify-content: space-between;
-  background-color: #2a2a2a;
-  color: #fff;
-  padding: 20px;
-  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .weather-icon {
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
 }
 
 .temperature {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
 }
 
 .unit-toggle {
   font-size: 16px;
-  margin: 0 3px;
+  margin: 0 5px;
   cursor: pointer;
-  color: #aaa;
+  color: #fff;
+  opacity: 0.7;
 }
 
-.unit-toggle.active {
-  color: #fff;
-  font-weight: bold;
+.unit-toggle:hover {
+  opacity: 1;
 }
 
 .extra-info {
   font-size: 14px;
-  margin-top: 8px;
-  color: #aaa;
+  margin-top: 10px;
+  color: #ddd;
 }
 
 .right {
   text-align: right;
+  min-width: 180px;
+  margin-top: 15px;
 }
 
 .label {
@@ -145,4 +171,12 @@ button:hover {
   font-size: 16px;
   color: #eee;
   margin-top: 5px;
+}
+
+.location-name h2 {
+  margin-bottom: 15px;
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 1px;
 }
